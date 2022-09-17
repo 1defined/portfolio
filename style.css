@@ -11,14 +11,14 @@
   font-size: 62.5%; /*1 rem = 10px agora (+Facil para padronizar e manter a flexibilidade)*/
 
   /*variáveis do css*/
-  --hue: 210;
-  --primary-color: hsl(0, 0%, 7%); /*hsl(var(--hue), 100%, 26%);*/
-  --headline: hsl(210, 11%, 15%);
-  --paragraph: hsl(210, 9%, 31%);
-  --brand-beige: hsl(39, 100%, 97%);
-  --brand-light: hsl(calc(var(--hue) - 22), 23%, 89%);
+  --hue: 240;
+  --primary-color: hsl(var(--hue), 5%, 7%);
+  --headline: white;/* hsl(210, 11%, 15%);*/
+  --paragraph: hsl(0, 0%, 100%);
+  --brand-beige: hsl(calc(var(--hue) - 22), 15%, 15%);
+  --brand-light: hsla(calc(var(--hue) - 22), 23%, 23%,0.95);
   --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
-  --bg-light: hsl(180, 14%, 97%);
+  --bg-light: hsl(214, 25%, 84%);
   --nav-height: 7.2rem;
   --brand-dark: hsl(var(--hue), 100%, 14%);
 }
@@ -62,9 +62,10 @@ section {
   padding-block: 10rem;
 }
 
+
 section header h4 {
   font-size: 1.4rem;
-  color: var(--primary-color);
+  color: white; 
   margin-bottom: 1.6rem;
 
   font-weight: 700;
@@ -77,7 +78,7 @@ section header h4 {
 section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
-  color: var(--headline);
+  color: --var(--headline);
 }
 
 section header h1 {
@@ -332,11 +333,26 @@ body.menu-expanded button path {
   margin-bottom: 3.2rem;
 }
 
+.border-effect{
+  background-image:  linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+
+  display: flex;
+  
+  padding: .3rem;
+  width: 20.4rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  
+  transition: transform .3s;
+
+}
+
 #home img {
   display: block;
   margin-inline: auto;
   width: 26.4rem; /*Definir um tamanho para imagem acompanhar a responsibidade*/
-  border-radius: 20rem;
+  border-radius: 50%;
   /*object-position:0 2rem; caso a img tivesse em PNG ela teria um tamanho maior que n me permitiria colar a mulher na div stats, portanto mexeríamos no posionamento
   da imagem (tag img é uma caixa que contém uma imagem) para que ela ficasse um pouco mais pra baixo */
 }
@@ -348,7 +364,7 @@ body.menu-expanded button path {
   background-color: var(--brand-beige);
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
-
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,7 +380,7 @@ body.menu-expanded button path {
 
 #home .stat p {
   margin: 0;
-  color: var(--primary-color);
+  color: white;
   line-height: 150%;
 }
 
@@ -378,21 +394,43 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+ 
 }
 
 #services .card {
   padding: 2.4rem;
-  text-align: left;
+  text-align: center;
 
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 
   background-color: white;
+
 }
 
 #services .card h3 {
   margin-block: 1.6rem; /*pega em cima e embaixo*/
 }
+
+#services .card .apex-logo{
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  border-radius: 50%;
+  fill: #CA4D3C;
+}
+
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+details > summary {
+  list-style: none;
+  margin: auto;
+  text-align: center;
+}
+
 
 /*============ABOUT================================================================*/
 #about {
@@ -518,6 +556,7 @@ footer .social-links {
     grid-area: B;
     display: flex;
   }
+
 
   /*============NAVIGATION================================================================*/
 
@@ -668,7 +707,7 @@ footer .social-links {
     font-size: 5.2rem;
   }
 
-  #hoem .content p {
+  #home .content p {
     font-size: 1.8rem;
   }
 
@@ -683,6 +722,20 @@ footer .social-links {
     margin: 0;
   }
 
+  .border-effect{
+    background-image:  linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  
+    display: flex;
+    
+    padding: .3rem;
+    width: 20.4rem;
+    margin: auto;
+    border-radius: 50%;
+    
+    transition: transform .3s;
+  
+  }
+  
   #home img {
     width: 42rem;
   }
@@ -762,4 +815,11 @@ footer .social-links {
   footer p {
     margin-bottom: 0;
   }
+}
+
+
+/*===============================ANIMATIONS===============================*/
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
 }

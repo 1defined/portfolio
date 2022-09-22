@@ -18,7 +18,7 @@
   --brand-beige: hsl(calc(var(--hue) - 22), 15%, 15%);
   --brand-light: hsla(calc(var(--hue) - 22), 23%, 23%,0.95);
   --brand-light-2: hsl(calc(var(--hue) + 10), 14%, 97%);
-  --bg-light: hsl(214, 25%, 84%);
+  --bg-light: hsla(calc(var(--hue) - 22), 23%, 23%,0.95); /*hsl(214, 25%, 84%);*/
   --nav-height: 7.2rem;
   --brand-dark: hsl(var(--hue), 100%, 14%);
 }
@@ -26,6 +26,24 @@
 html {
   /*smooth scrolling precisa ser habilitado no navegador às vezes*/
   scroll-behavior: smooth;
+}
+
+/*scrollbar custom*/
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #2d3747;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: #63636305;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 6px;
+  border: 0px solid #ffffff00;
 }
 
 html,
@@ -41,7 +59,13 @@ body {
 
   overflow: overlay; /*sobrepõe o scroll da página, o tirando do cálculo qnd clica no menu (muda de pos o logo)*/
 
-  background-color: var(--bg-light);
+  /* background-color: var(--bg-light); */
+  background-image: linear-gradient(180deg,#303949,#262626);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+
+  
 }
 
 .wrapper {
@@ -404,7 +428,8 @@ body.menu-expanded button path {
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 
-  background-color: white;
+  background-color: var(--brand-beige);
+  color: white;
 
 }
 
@@ -425,12 +450,16 @@ details[open] summary ~ * {
   animation: sweep .5s ease-in-out;
 }
 
-details > summary {
+
+details > summary  {
   list-style: none;
   margin: auto;
   text-align: center;
 }
 
+summary svg{
+  max-height: 10rem;
+}
 
 /*============ABOUT================================================================*/
 #about {

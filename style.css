@@ -381,6 +381,11 @@ body.menu-expanded button path {
   da imagem (tag img é uma caixa que contém uma imagem) para que ela ficasse um pouco mais pra baixo */
 }
 
+#home .hiHand{
+  width: 3rem;
+  display: inline;
+}
+
 #home .stats {
   width: 100%;
   padding-block: 4rem; /*Mexe no eixo Y padding-top/bottom*/
@@ -412,6 +417,18 @@ body.menu-expanded button path {
 
 #services header h2 {
   margin-bottom: 6rem;
+  color: white;
+}
+
+#services header h6 img{
+  /* border: 1px solid red; */
+  /*margin-top: 10%;*/
+  width: 1.5rem;
+  height: 5rem;
+  position: relative;
+  top: 1.8rem;
+  object-fit: cover;
+  padding-left: .2rem;
 }
 
 #services .cards {
@@ -469,6 +486,7 @@ summary svg{
 
 #about header h2 {
   margin-bottom: 2.4rem;
+  color: white;
 }
 
 #about .content p {
@@ -767,6 +785,7 @@ footer .social-links {
   
   #home img {
     width: 42rem;
+    
   }
 
   /*procure em home stats um stat que tenha um outro stat ANTERIOR a ele*/

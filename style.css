@@ -424,7 +424,7 @@ body.menu-expanded button path {
 #services .card {
   padding: 2.4rem;
   text-align: center;
-
+ 
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
 
@@ -439,7 +439,7 @@ body.menu-expanded button path {
 
 #services .card .apex-logo{
   width: 8rem;
-  height: 8rem;
+  height: 10rem;
   text-align: center;
   border-radius: 50%;
   fill: #CA4D3C;
@@ -788,11 +788,15 @@ footer .social-links {
     flex-direction: row;
     flex-wrap: wrap; /*usando o wrap ele pega o tamanho das caixas para ajustar, como as caixas estavam mt grandes, abaixamos o tamanho delas abaixo*/
     gap: 4rem;
+    align-items: flex-start;
+
   }
 
   #services .card {
     width: 30%;
     flex-grow: 1; /*após diminuir o tamanho ainda ficou algum espaço entre os cards, então usamos o flex-grow para preenche-lo*/
+    min-height: 19rem;
+
   }
 
   /*============ABOUT================================================================*/

@@ -158,7 +158,7 @@ section .content p {
 /*============CUSTOM COLORS================================================================*/
 #backToTopButton circle,
 #navigation .logo path[fill*='#00856F'] {
-  fill: var(--primary-color);
+  fill: #000047;
 }
 
 button.open-menu path[stroke*='#00856F'],
@@ -415,30 +415,30 @@ body.menu-expanded button path {
 
 /*============SERVICES================================================================*/
 
-#services header h2 {
+#stacks header h2,
+#projects header h2 {
   margin-bottom: 6rem;
   color: white;
 }
 
-#services header h6 img{
-  /* border: 1px solid red; */
-  /*margin-top: 10%;*/
-  width: 1.5rem;
-  height: 5rem;
+#stacks header h6 img,
+#projects header h6 img{
+ 
   position: relative;
-  top: 1.8rem;
-  object-fit: cover;
-  padding-left: .2rem;
+  top: .7rem;
+  left: .7rem;
 }
 
-#services .cards {
+#stacks .cards,
+#projects .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
  
 }
 
-#services .card {
+#stacks .card,
+#projects .card {
   padding: 2.4rem;
   text-align: center;
  
@@ -450,11 +450,12 @@ body.menu-expanded button path {
 
 }
 
-#services .card h3 {
+#stacks .card h3,
+#projects .card h3 {
   margin-block: 1.6rem; /*pega em cima e embaixo*/
 }
 
-#services .card .apex-logo{
+#stacks .card .apex-logo{
   width: 8rem;
   height: 10rem;
   text-align: center;
@@ -462,6 +463,18 @@ body.menu-expanded button path {
   fill: #CA4D3C;
 }
 
+.projects-list{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.projects-list svg{
+  background-color: #21252c;
+  border-radius: 10%;
+  width: 20rem;
+  height: 20rem;
+}
 
 details[open] summary ~ * {
   animation: sweep .5s ease-in-out;
@@ -798,12 +811,14 @@ footer .social-links {
   }
 
   /*============SERVICES================================================================*/
-  #services h2 {
+  #stacks h2,
+  #projects h2 {
     width: 47rem;
     margin-inline: auto;
   }
 
-  #services .cards {
+  #stacks .cards,
+  #projects .cards {
     flex-direction: row;
     flex-wrap: wrap; /*usando o wrap ele pega o tamanho das caixas para ajustar, como as caixas estavam mt grandes, abaixamos o tamanho delas abaixo*/
     gap: 4rem;
@@ -811,7 +826,8 @@ footer .social-links {
 
   }
 
-  #services .card {
+  #stacks .card,
+  #projects .card {
     width: 30%;
     flex-grow: 1; /*após diminuir o tamanho ainda ficou algum espaço entre os cards, então usamos o flex-grow para preenche-lo*/
     min-height: 19rem;

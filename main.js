@@ -4,7 +4,7 @@ function onScroll() {
   showNavOnScroll()
   toggleBackToTopButtonOnScroll()
   activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(stacks)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(contact)
 }
@@ -69,9 +69,12 @@ ScrollReveal({
 }).reveal(`#home,
            #home img,
            #home .stats,
-           #services,
-           #services header,
-           #services .card,
+           #stacks,
+           #stacks header,
+           #stacks .card,
+           #projects,
+           #projects header,
+           #projects .card,
            #about,
            #about header,
            #about .content`)

@@ -463,17 +463,49 @@ body.menu-expanded button path {
   fill: #CA4D3C;
 }
 
+.list-wrapper {
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  padding-top: 6px;
+  border-radius: 10px;
+
+}
+
+
+
 .projects-list{
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  background: radial-gradient(circle at -4% -12.9%, rgb(43 56 62) 0.3%, rgb(30, 33, 48) 90.2%);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.projects-list svg{
-  background-color: #21252c;
-  border-radius: 10%;
+.projects-list li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.tiny-card{
   width: 20rem;
   height: 20rem;
+  background-color: #21252c;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.projects-list svg, .projects-list img {
+
+  width: 15rem;
+  height: 15rem;
 }
 
 details[open] summary ~ * {

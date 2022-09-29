@@ -5,6 +5,7 @@ function onScroll() {
   toggleBackToTopButtonOnScroll()
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(stacks)
+  activateMenuAtCurrentSection(projects)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(contact)
 }
@@ -73,8 +74,9 @@ ScrollReveal({
            #stacks header,
            #stacks .card,
            #projects,
-           #projects header,
-           #projects .card,
+           #projects list-wrapper,
+           #projects projects-list,
+           #projects .tiny-card,
            #about,
            #about header,
            #about .content`)

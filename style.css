@@ -478,7 +478,7 @@ body.menu-expanded button path {
   flex-wrap: wrap;
   justify-content: center;
   color: white;
-  background: radial-gradient(circle at -4% -12.9%, rgb(43 56 62) 0.3%, rgb(30, 33, 48) 90.2%);
+  background: radial-gradient(circle at -4% -12.9%, #292C30 0.3%, rgb(30, 33, 48) 90.2%);
   padding-top: 2rem;
   padding-bottom: 2rem;
 }

@@ -6,6 +6,7 @@ function onScroll() {
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(stacks)
   activateMenuAtCurrentSection(projects)
+  activateMenuAtCurrentSection(exp)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(contact)
 }
@@ -62,6 +63,13 @@ function openMenu() {
 function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
+
+function toggleDetails(el){
+  console.log(el);
+  el.parentNode.classList.toggle('details-opened');
+}
+
+document.querySelector('#exp .card details').addEventListener("click",function(){toggleDetails(this)});
 
 ScrollReveal({
   origin: 'top',

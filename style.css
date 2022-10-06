@@ -416,13 +416,15 @@ body.menu-expanded button path {
 /*============SERVICES================================================================*/
 
 #stacks header h2,
-#projects header h2 {
+#projects header h2,
+#exp header h2{
   margin-bottom: 6rem;
   color: white;
 }
 
 #stacks header h6 img,
-#projects header h6 img{
+#projects header h6 img,
+#exp header h6 img{
  
   position: relative;
   top: .7rem;
@@ -430,7 +432,8 @@ body.menu-expanded button path {
 }
 
 #stacks .cards,
-#projects .cards {
+#projects .cards,
+#exp .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
@@ -438,7 +441,8 @@ body.menu-expanded button path {
 }
 
 #stacks .card,
-#projects .card {
+#projects .card,
+#exp .card {
   padding: 2.4rem;
   text-align: center;
  
@@ -451,7 +455,8 @@ body.menu-expanded button path {
 }
 
 #stacks .card h3,
-#projects .card h3 {
+#projects .card h3,
+#exp .card h3 {
   margin-block: 1.6rem; /*pega em cima e embaixo*/
 }
 
@@ -461,6 +466,27 @@ body.menu-expanded button path {
   text-align: center;
   border-radius: 50%;
   fill: #CA4D3C;
+}
+
+
+#exp .card{
+
+  gap: 3rem;
+  width: 15rem;
+}
+
+#exp .details-opened{
+  width: 45rem;
+  background-color: blue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+} 
+
+#exp .card img{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
 }
 
 .list-wrapper {

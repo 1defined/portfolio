@@ -1,4 +1,6 @@
 const nav = document.querySelector('#navigation')
+let expCards = document.querySelectorAll('#exp .card details');
+const closeExpCardAction = document.querySelectorAll('#exp .card');
 
 function onScroll() {
   showNavOnScroll()
@@ -66,10 +68,31 @@ function closeMenu() {
 
 function toggleDetails(el){
   console.log(el);
-  el.parentNode.classList.toggle('details-opened');
+  //tempo do elemento receber o open do details
+  setTimeout(()=>{
+    
+    if (el.open)
+    {
+      el.parentNode.classList.add('details-opened');
+    }else{
+      el.parentNode.classList.remove('details-opened');
+    }
+  
+  },1)
+
 }
 
-document.querySelector('#exp .card details').addEventListener("click",function(){toggleDetails(this)});
+expCards.forEach(card => {
+
+  card.addEventListener("click",function(){toggleDetails(this)})
+
+});
+
+closeExpCardAction.forEach(card => {
+
+  card.addEventListener("click",function(){this.firstElementChild.open = false; toggleDetails(this.firstElementChild);})
+
+});
 
 ScrollReveal({
   origin: 'top',

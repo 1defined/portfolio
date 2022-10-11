@@ -166,6 +166,11 @@ button.open-menu path[stroke*='#00856F'],
   stroke: var(--primary-color);
 }
 
+.open-menu{
+  position: relative;
+  left: 90%;
+}
+
 body.menu-expanded #navigation .logo path,
 #navigation.scroll .logo path {
   fill: white;
@@ -586,9 +591,14 @@ summary svg{
   margin-bottom: 6rem;
 }
 
+#about img {
+  border-radius: 3%;
+}
+
 /*============CONTACT================================================================*/
 #contact {
   text-align: left;
+  color: white;
 }
 
 #contact header {
@@ -607,6 +617,10 @@ summary svg{
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+#contact img{
+  border-radius: 3%;
 }
 
 /*============FOOTER================================================================*/
@@ -635,7 +649,7 @@ footer .logo path {
 }
 
 footer p {
-  color: var(--brand-beige);
+  color: white;
   line-height: 2;
 
   margin-bottom: 3.2rem;
@@ -727,7 +741,11 @@ footer .social-links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 65%;
+  }
+
+  nav .wrapper{
+    justify-content: center;
   }
 
   nav#navigation .menu ul:nth-child(1) {

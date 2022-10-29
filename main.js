@@ -1,6 +1,6 @@
 const nav = document.querySelector('#navigation')
-let expCards = document.querySelectorAll('#exp .card details');
-const closeExpCardAction = document.querySelectorAll('#exp .card');
+let expDetail = document.querySelectorAll('#exp .card .details');
+
 
 function onScroll() {
   showNavOnScroll()
@@ -67,9 +67,27 @@ function closeMenu() {
 }
 
 function toggleDetails(el){
-  console.log(el);
+  
+
+    if(el.parentNode.classList.contains('details-opened')){
+      console.log('caiu if' + el);
+      el.parentNode.classList.remove('details-opened'); 
+      el.lastElementChild.style.display = 'none';   
+      el.open = false;
+      
+    }else{
+      console.log('caiu else'+ el)
+      el.parentNode.classList.add('details-opened');
+
+      el.lastElementChild.style.display = 'block';   
+      openedCards = document.querySelectorAll('#exp .details-opened details');  
+    }
+   
+                          
+ 
+
   //tempo do elemento receber o open do details
-  setTimeout(()=>{
+ /* setTimeout(()=>{
     
     if (el.open)
     {
@@ -78,21 +96,26 @@ function toggleDetails(el){
       el.parentNode.classList.remove('details-opened');
     }
   
-  },1)
+  },1)*/
 
 }
 
-expCards.forEach(card => {
 
-  card.addEventListener("click",function(){toggleDetails(this)})
 
-});
+expDetail.forEach(xpDetail => {
+                                  
+                                  xpDetail.addEventListener("click", function(){ toggleDetails(this);})
 
+                              }); 
+
+/*
 closeExpCardAction.forEach(card => {
 
-  card.addEventListener("click",function(){this.firstElementChild.open = false; toggleDetails(this.firstElementChild);})
+  card.addEventListener("click",function(){this.firstElementChild.open = false;  toggleDetails(this.firstElementChild); })
 
 });
+*/
+
 
 ScrollReveal({
   origin: 'top',

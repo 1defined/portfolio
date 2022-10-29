@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+.cards a:visited, .cards a{
+color:#16718d;
+text-decoration: none;
+}
+
 :root {
   /*font-size: 100%; 16 px (padrão) logo 1rem = 16px*/
   font-size: 62.5%; /*1 rem = 10px agora (+Facil para padronizar e manter a flexibilidade)*/
@@ -449,7 +454,8 @@ body.menu-expanded button path {
 #projects .card,
 #exp .card {
   padding: 2.4rem;
-  text-align: center;
+  text-align: left;
+  cursor: pointer;
  
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
@@ -459,6 +465,10 @@ body.menu-expanded button path {
 
   transition: height 0.2s cubic-bezier(0, 0, 0.88, 0.58);
 
+}
+
+.card-main-information{
+  text-align: center;
 }
 
 #stacks .card h3,
@@ -486,28 +496,43 @@ body.menu-expanded button path {
   width: 15rem;
 }
 
+#exp .card .details p{
+  display: none;
+}
+
+#exp,.card,summary{
+  text-align: center;
+}
+
+#exp .details-opened .details summary{
+  margin-bottom: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 #exp .details-opened{
   width: 45rem;
   transition: width 0.2s cubic-bezier(0, 1.01, 0.59, 1.37);
+  text-align: start; 
 } 
 
 #exp .details-opened details summary{
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 2rem;
+  
 }
 
-#exp .details-opened details p{
-  position: relative;
-  padding-left: 9rem;
-  bottom: 2rem;
-  text-align: start;
+#exp .details-opened details{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-#exp .details-opened details img, #exp .details-opened details svg {
-  position: relative;
-  top: 4rem;
-}
 
 #exp .card img, #exp .card svg{
   width: 8rem;

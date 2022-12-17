@@ -70,13 +70,11 @@ function toggleDetails(el){
   
 
     if(el.parentNode.classList.contains('details-opened')){
-      console.log('caiu if' + el);
       el.parentNode.classList.remove('details-opened'); 
       el.lastElementChild.style.display = 'none';   
       el.open = false;
       
     }else{
-      console.log('caiu else'+ el)
       el.parentNode.classList.add('details-opened');
 
       el.lastElementChild.style.display = 'block';   

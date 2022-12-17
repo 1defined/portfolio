@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-.cards a:visited, .cards a{
+a:visited,  a{
 color:#16718d;
 text-decoration: none;
 }
@@ -42,11 +42,11 @@ html {
   width: 6px;
 }
 *::-webkit-scrollbar-track {
-  background: #63636305;
+  background: #797272;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: var(--brand-dark);
   border-radius: 6px;
   border: 0px solid #ffffff00;
 }
@@ -425,6 +425,10 @@ body.menu-expanded button path {
 
 /*============SERVICES================================================================*/
 
+summary:not(#exp summary){
+  cursor: pointer;
+}
+
 #stacks header h2,
 #projects header h2,
 #exp header h2{
@@ -455,7 +459,6 @@ body.menu-expanded button path {
 #exp .card {
   padding: 2.4rem;
   text-align: left;
-  cursor: pointer;
  
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
@@ -463,7 +466,7 @@ body.menu-expanded button path {
   background-color: var(--brand-beige);
   color: white;
 
-  transition: height 0.2s cubic-bezier(0, 0, 0.88, 0.58);
+  transition: width 0.2s cubic-bezier(0, 1.01, 0.59, 1.37);
 
 }
 
@@ -491,7 +494,7 @@ body.menu-expanded button path {
 }
 
 #exp .card{
-
+  cursor: pointer;
   gap: 3rem;
   width: 15rem;
 }
@@ -551,7 +554,7 @@ body.menu-expanded button path {
 
 .projects-list{
   display: flex;
-  gap: 16px;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
   color: white;
@@ -564,7 +567,7 @@ body.menu-expanded button path {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 1.5rem;
 
 }
 
@@ -576,8 +579,22 @@ body.menu-expanded button path {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
  
 }
+
+#projects .tiny-card:before {
+  content: "";
+  position: absolute;
+  top: -2.5%;
+  left: 15%;
+  height: 4%;
+  width: 70%;
+  background-image: linear-gradient(to right, #61ede4, #00bee1, #008cdd, #0056c5, #1e0d8e);
+  transform: translateZ(-1px);
+  border-radius: 1rem;
+}
+
 
 .projects-list svg, .projects-list img {
 
@@ -589,6 +606,9 @@ details[open] summary ~ * {
   animation: sweep .5s ease-in-out;
 }
 
+details[closed] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
 
 details > summary  {
   list-style: none;
@@ -643,9 +663,12 @@ summary svg{
   align-items: center;
   gap: 0.8rem;
 }
+#contact .wrapper .col-b{
+  padding-left: 3rem;
+}
 
-#contact img{
-  border-radius: 3%;
+#contact svg{
+  max-width: 100%;
 }
 
 /*============FOOTER================================================================*/
@@ -733,6 +756,7 @@ footer .social-links {
   .col-b {
     grid-area: B;
     display: flex;
+    align-items: center;
   }
 
 
@@ -942,19 +966,30 @@ footer .social-links {
   #stacks .cards,
   #projects .cards {
     flex-direction: row;
-    flex-wrap: wrap; /*usando o wrap ele pega o tamanho das caixas para ajustar, como as caixas estavam mt grandes, abaixamos o tamanho delas abaixo*/
+    flex-wrap: wrap; 
     gap: 4rem;
     align-items: flex-start;
 
   }
 
-  #stacks .card,
-  #projects .card {
+  #stacks .card{
     width: 30%;
-    flex-grow: 1; /*após diminuir o tamanho ainda ficou algum espaço entre os cards, então usamos o flex-grow para preenche-lo*/
+    flex-grow: 1; 
     min-height: 19rem;
 
   }
+
+  .projects-list{
+    gap: 5rem;
+
+  }
+
+
+  #projects .tiny-card:hover {
+    transform: scale(1.1) !important;
+    transition-duration: 300ms !important;
+
+    }
 
   /*============ABOUT================================================================*/
 
@@ -983,6 +1018,7 @@ footer .social-links {
     width: 40.4rem;
   }
 
+ 
   /*============FOOTER================================================================*/
 
   footer {

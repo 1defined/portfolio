@@ -516,7 +516,7 @@ summary:not(#exp summary){
 }
 
 #exp .details-opened{
-  width: 45rem;
+  width: 35rem;
   transition: width 0.2s cubic-bezier(0, 1.01, 0.59, 1.37);
   text-align: start; 
 } 
@@ -978,7 +978,9 @@ footer .social-links {
     min-height: 19rem;
 
   }
-
+  #exp .details-opened {
+    width: 75rem;
+  }
   .projects-list{
     gap: 5rem;
 
